@@ -1,4 +1,5 @@
 var path = require( 'path' );
+var webpack = require( 'webpack' );
 
 module.exports = {
   devTool: 'eval',
@@ -14,6 +15,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join( __dirname, 'public' )
   },
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
 
   module: {
     loaders: [
