@@ -1,0 +1,9 @@
+{
+    "preset": "idiomatic",
+    "esnext": true,
+    "fileExtensions": [ ".js", ".jsx" ],
+    "validateQuoteMarks": "'",
+    "validateLineBreaks": null,
+    "requireEarlyReturn": false,
+    "requireDotNotation": { "allExcept": [ "snake_case" ] }
+}

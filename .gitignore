@@ -1,2 +1,15 @@
 node_modules
-dist
+bower_components
+build
+
+.vagrant
+.DS_Store
+
+npm-debug.log
+
+public/index.html
+public/index.js
+public/settings.js
+public/*.less
+public/routes
+public/data

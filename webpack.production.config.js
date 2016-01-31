@@ -2,11 +2,8 @@ var path = require( 'path' );
 var webpack = require( 'webpack' );
 
 module.exports = {
-  devTool: 'eval',
-  debug: true,
+  devTool: 'source-map',
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080',
-    'webpack/hot/only-dev-server',
     './client/scripts/router'
   ],
 
@@ -16,12 +13,16 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      // This has effect on the react lib size.
+      'process.env': {
+        NODE_ENV: JSON.stringify( 'production' )
+      }
+    }),
     new webpack.IgnorePlugin( /vertx/ ),
-    new webpack.ProvidePlugin({
-      '_': 'underscore'
-    })
+    new webpack.IgnorePlugin( /un~$/ ),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin()
   ],
 
   resolve: {

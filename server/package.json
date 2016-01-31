@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "Backend \"server\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julius the Pious",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.6"
+  }
+}

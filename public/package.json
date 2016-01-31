@@ -1,0 +1,17 @@
+{
+  "name": "standalone",
+  "main": "index.html",
+  "node-main": "index.js",
+  "js-flags": "--harmony",
+  "webkit":{
+    "plugin": true
+  },
+  "window": {
+    "frame": true,
+    "toolbar": true,
+    "height": 400,
+    "width": 800,
+    "resizable": true,
+    "position": "mouse"
+  }
+}
